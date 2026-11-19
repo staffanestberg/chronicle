@@ -1,0 +1,31 @@
+@font-face{font-family:Bodoni Moda;src:url('/fonts/bodoni-moda-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Manrope;src:url('/fonts/manrope-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Manrope;src:url('/fonts/manrope-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+:root{color-scheme:dark;--ground:#171918;--paper:#e8eae1;--secondary:#a2aca0;--accent:#d5e7ae;--frame:#465043;font-family:Manrope,Arial,sans-serif;color:var(--paper);background:var(--ground);font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--ground)}
+body{margin:0;min-width:280px}
+.page{min-height:100svh;display:flex;flex-direction:column;padding:clamp(24px,4.5vw,64px);max-width:1920px;margin-inline:auto}
+.masthead,footer{display:flex;justify-content:space-between;align-items:baseline;gap:20px;font-size:13px;font-weight:400;line-height:1.6;color:var(--secondary)}
+.masthead{padding-bottom:20px}
+.site-address{color:var(--secondary)}
+main{position:relative;isolation:isolate;min-height:420px;flex:1;display:grid;place-items:center;margin:34px 0 42px}
+.viewfinder{position:absolute;inset:3% 5%;pointer-events:none;animation:aperture-open 1.7s cubic-bezier(.16,1,.3,1) both}
+.viewfinder span{position:absolute;width:35px;height:35px;border-color:var(--frame);border-style:solid;border-width:0}
+.viewfinder span:nth-child(1){top:0;left:0;border-top-width:1px;border-left-width:1px}
+.viewfinder span:nth-child(2){top:0;right:0;border-top-width:1px;border-right-width:1px}
+.viewfinder span:nth-child(3){bottom:0;left:0;border-bottom-width:1px;border-left-width:1px}
+.viewfinder span:nth-child(4){bottom:0;right:0;border-bottom-width:1px;border-right-width:1px}
+.title-card{text-align:center;padding:62px 24px}
+h1{font:500 clamp(64px,9vw,96px)/1.08 'Bodoni Moda',Georgia,serif;letter-spacing:-.04em;margin:0 0 30px;text-wrap:balance}
+.promise{font-weight:400;font-size:clamp(22px,3.2vw,36px);line-height:1.4;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.description{font-size:14px;line-height:1.7;color:var(--secondary);margin:24px 0 0;text-wrap:balance}
+footer{padding-top:18px}
+footer p{margin:0}
+.status{font-weight:500;color:var(--paper)}
+.status span{color:var(--accent)}
+@keyframes aperture-open{from{clip-path:inset(45% 0)}to{clip-path:inset(0)}}
+@media(min-width:1500px){main{margin-block:54px}}
+@media(max-width:600px){.page{padding:26px 24px}.masthead{font-size:12px;gap:12px}.site-address{display:none}main{min-height:420px;margin:26px 0 36px}.viewfinder{inset:2% 0}.viewfinder span{width:22px;height:22px}.title-card{padding:64px 12px}h1{font-size:clamp(58px,15.5vw,86px);margin-bottom:27px}.promise{font-size:26px}.description{font-size:13px;max-width:24ch;margin:24px auto 0}footer{font-size:12px;flex-direction:column;gap:10px}}
+@media(max-height:580px) and (min-width:601px){.page{padding:24px 40px}main{min-height:300px;margin-block:15px}.title-card{padding:25px}h1{font-size:74px;margin-bottom:16px}.promise{font-size:25px}.description{margin-top:15px}}
+@media(prefers-reduced-motion:reduce){.viewfinder{animation:none}}

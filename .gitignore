@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies and generated output
+node_modules/
+.next/
+.nuxt/
+.astro/
+.svelte-kit/
+.vercel/
+.netlify/
+dist/
+build/
+coverage/
+*.log
+
+# Xcode user state and build output
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcresult/
